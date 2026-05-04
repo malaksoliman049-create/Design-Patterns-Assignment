@@ -22,13 +22,17 @@ public class Main {
             System.out.println("Cloning failed");
         }
 
-        
-        Craft c1 = CraftFactory.createCraft("bracelet");
-        Craft c2 = CraftFactory.createCraft("candle");
-        Craft c3 = CraftFactory.createCraft("bag");
+    
+        CraftFactory braceletFactory = new BraceletFactory();
+        CraftFactory candleFactory = new CandleFactory();
+        CraftFactory bagFactory = new BagFactory();
 
-        if (c1 != null) c1.create();
-        if (c2 != null) c2.create();
-        if (c3 != null) c3.create();
+        Craft c1 = braceletFactory.createCraft();
+        Craft c2 = candleFactory.createCraft();
+        Craft c3 = bagFactory.createCraft();
+
+        c1.create();
+        c2.create();
+        c3.create();
     }
 }
