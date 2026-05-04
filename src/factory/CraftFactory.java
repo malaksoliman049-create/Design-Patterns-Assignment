@@ -1,3 +1,5 @@
+package factory;
+
 public class CraftFactory {
     public static Craft createCraft(String type) {
         if (type.equalsIgnoreCase("bracelet")) {

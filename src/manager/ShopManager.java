@@ -1,3 +1,5 @@
+package manager;
+
 public class ShopManager {
     private static ShopManager instance;
 
@@ -11,6 +13,6 @@ public class ShopManager {
     }
 
     public void manageShop() {
-        System.out.println("Managing the shop...");
+        System.out.println("Managing the handmade crafts shop...");
     }
 }

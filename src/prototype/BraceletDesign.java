@@ -1,3 +1,5 @@
+package prototype;
+
 public class BraceletDesign implements Cloneable {
     private String design;
 
@@ -6,7 +8,7 @@ public class BraceletDesign implements Cloneable {
     }
 
     public void showDesign() {
-        System.out.println("Design: " + design);
+        System.out.println("Bracelet Design: " + design);
     }
 
     @Override
