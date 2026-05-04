@@ -7,9 +7,11 @@ import factory.*;
 public class Main {
     public static void main(String[] args) {
 
+        // Singleton
         ShopManager manager = ShopManager.getInstance();
         manager.manageShop();
 
+        // Prototype
         BraceletDesign d1 = new BraceletDesign("Golden Design");
         BraceletDesign d2 = d1.clone();
 
@@ -20,7 +22,7 @@ public class Main {
             System.out.println("Cloning failed");
         }
 
-
+        // Factory
         Craft c1 = CraftFactory.createCraft("bracelet");
         Craft c2 = CraftFactory.createCraft("candle");
         Craft c3 = CraftFactory.createCraft("bag");
