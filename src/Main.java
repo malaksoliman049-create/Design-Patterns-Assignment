@@ -2,19 +2,17 @@ public class Main {
     public static void main(String[] args) {
 
         
-        Singleton.SystemManager m1 = Singleton.SystemManager.getInstance();
-        Singleton.SystemManager m2 = Singleton.SystemManager.getInstance();
-        m1.show();
-        System.out.println(m1 == m2);
+        Singleton.ShopManager manager = Singleton.ShopManager.getInstance();
+        manager.openShop();
 
         
-        Prototype.Circle c1 = new Prototype.Circle("Red");
-        Prototype.Shape c2 = c1.clone();
-        c2.draw();
+        Prototype.BraceletDesign d1 = new Prototype.BraceletDesign("Beads Style");
+        Prototype.Design d2 = d1.clone();
+        d2.showDesign();
 
-        
-        Factory.FactoryMethod f = new Factory.FactoryA();
-        Factory.Product p = f.createProduct();
-        p.display();
+    
+        Factory.CraftFactory factory = new Factory.CandleFactory();
+        Factory.Craft craft = factory.createCraft();
+        craft.create();
     }
 }

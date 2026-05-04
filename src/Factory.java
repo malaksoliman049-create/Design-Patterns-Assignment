@@ -1,34 +1,46 @@
 public class Factory {
 
-    interface Product {
-        void display();
+    interface Craft {
+        void create();
     }
 
-    static class ProductA implements Product {
-        public void display() {
-            System.out.println("This is Product A");
+    static class Bracelet implements Craft {
+        public void create() {
+            System.out.println("Creating Bracelet");
         }
     }
 
-    static class ProductB implements Product {
-        public void display() {
-            System.out.println("This is Product B");
+    static class Candle implements Craft {
+        public void create() {
+            System.out.println("Creating Candle");
         }
     }
 
-    interface FactoryMethod {
-        Product createProduct();
-    }
-
-    static class FactoryA implements FactoryMethod {
-        public Product createProduct() {
-            return new ProductA();
+    static class Bag implements Craft {
+        public void create() {
+            System.out.println("Creating Handmade Bag");
         }
     }
 
-    static class FactoryB implements FactoryMethod {
-        public Product createProduct() {
-            return new ProductB();
+    interface CraftFactory {
+        Craft createCraft();
+    }
+
+    static class BraceletFactory implements CraftFactory {
+        public Craft createCraft() {
+            return new Bracelet();
+        }
+    }
+
+    static class CandleFactory implements CraftFactory {
+        public Craft createCraft() {
+            return new Candle();
+        }
+    }
+
+    static class BagFactory implements CraftFactory {
+        public Craft createCraft() {
+            return new Bag();
         }
     }
 }

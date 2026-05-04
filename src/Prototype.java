@@ -1,23 +1,23 @@
 public class Prototype {
 
-    interface Shape {
-        Shape clone();
-        void draw();
+    interface Design {
+        Design clone();
+        void showDesign();
     }
 
-    static class Circle implements Shape {
-        private String color;
+    static class BraceletDesign implements Design {
+        private String style;
 
-        public Circle(String color) {
-            this.color = color;
+        public BraceletDesign(String style) {
+            this.style = style;
         }
 
-        public Shape clone() {
-            return new Circle(this.color);
+        public Design clone() {
+            return new BraceletDesign(this.style);
         }
 
-        public void draw() {
-            System.out.println("Drawing " + color + " circle");
+        public void showDesign() {
+            System.out.println("Bracelet Design: " + style);
         }
     }
 }

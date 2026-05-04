@@ -1,19 +1,19 @@
 public class Singleton {
 
-    static class SystemManager {
-        private static SystemManager instance;
+    static class ShopManager {
+        private static ShopManager instance;
 
-        private SystemManager() {}
+        private ShopManager() {}
 
-        public static SystemManager getInstance() {
+        public static ShopManager getInstance() {
             if (instance == null) {
-                instance = new SystemManager();
+                instance = new ShopManager();
             }
             return instance;
         }
 
-        public void show() {
-            System.out.println("System Manager Running...");
+        public void openShop() {
+            System.out.println("Handmade Shop is Open 🧶");
         }
     }
 }
