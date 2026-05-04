@@ -1,18 +1,21 @@
 public class Main {
     public static void main(String[] args) {
 
-        
-        Singleton.ShopManager manager = Singleton.ShopManager.getInstance();
-        manager.openShop();
+        ShopManager manager = ShopManager.getInstance();
+        manager.manageShop();
 
-        
-        Prototype.BraceletDesign d1 = new Prototype.BraceletDesign("Beads Style");
-        Prototype.Design d2 = d1.clone();
+        BraceletDesign d1 = new BraceletDesign("Golden Design");
+        BraceletDesign d2 = d1.clone();
+
+        d1.showDesign();
         d2.showDesign();
 
-    
-        Factory.CraftFactory factory = new Factory.CandleFactory();
-        Factory.Craft craft = factory.createCraft();
-        craft.create();
+        Craft c1 = CraftFactory.createCraft("bracelet");
+        Craft c2 = CraftFactory.createCraft("candle");
+        Craft c3 = CraftFactory.createCraft("bag");
+
+        c1.create();
+        c2.create();
+        c3.create();
     }
 }
