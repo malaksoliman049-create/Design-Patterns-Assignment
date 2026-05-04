@@ -15,12 +15,8 @@ public class Main {
         BraceletDesign d1 = new BraceletDesign("Golden Design");
         BraceletDesign d2 = d1.clone();
 
-        if (d2 != null) {
-            d1.showDesign();
-            d2.showDesign();
-        } else {
-            System.out.println("Cloning failed");
-        }
+        d1.showDesign();
+        d2.showDesign();
 
     
         CraftFactory braceletFactory = new BraceletFactory();
