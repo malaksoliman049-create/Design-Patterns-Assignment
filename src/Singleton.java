@@ -13,7 +13,7 @@ public class Singleton {
         }
 
         public void openShop() {
-            System.out.println("Handmade Shop is Open 🧶");
+            System.out.println("Handmade Shop is Open");
         }
     }
 }
